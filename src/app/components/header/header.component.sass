@@ -1,0 +1,150 @@
+@use '/src/styles.sass' as gs
+@import "src/app/styles/mixins.sass"
+@import "src/app/styles/varibles.sass"
+
+
+.header
+	max-width: 1200px
+	margin: 0 auto
+	height: 80px
+	display: flex
+	justify-content: space-between
+
+	@include _700
+		padding: 0 16px
+
+	&_wrapper
+		height: 80px
+		box-shadow: 0px 0.5px 0px rgba(gs.$black, 0.12)
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		letter-spacing: -0.15px
+		color: rgba($label-color, 0.64)
+
+	&__logo
+		margin-right: 49px
+
+.nav
+	&__list
+		display: flex
+		height: 100%
+		margin: 0
+		list-style: none
+		color: rgba($label-color, 0.8)
+		align-items: center
+
+		@include _700
+			display: none
+
+	&__panel
+		display: flex
+		align-items: center
+
+		.nav__list
+			color: rgba($label-color, 0.64)
+
+
+	&__link
+		display: flex
+		align-items: center
+		height: 100%
+
+		&:hover
+			cursor: pointer
+			color: #282c34
+
+		&:not(:last-child)
+			margin-right: 24px
+
+			@include _900
+				margin-right: 24px
+
+		&_city
+			margin-right: 48px !important
+
+		&-active
+			height: 100%
+			color: rgba($label-color, 1)
+			font-weight: 500
+
+
+	&__links
+		display: flex
+
+
+.main_nav
+	a
+		@include mainNavLink
+
+
+.header
+	&__icon
+		display: flex
+		align-items: center
+		margin-right: 8px
+
+	&__balance
+		font-weight: 600
+
+	&__photo
+		height: 24px
+		width: 24px
+		border-radius: 50%
+		border: none
+
+	&__mobile_auth
+		display: none
+
+		@include _700
+			display: flex
+
+
+a
+	color: rgba($label-color, 0.64)
+
+a:hover
+	color: rgba($label-color, 1)
+
+
+.burgerMenu
+	background: none
+	border: none
+	display: none
+
+@media (max-width: 900px)
+	.navLink:not(:last-child)
+		margin-right: 12px
+
+	.header__logo
+		margin: 0
+
+	.navLink_city
+		margin-right: 10px !important
+
+	.navLink
+		text-align: center
+
+@media (max-width: 700px)
+	.navList
+		display: none
+
+	.header_mobile_auth
+		display: flex
+
+	.burgerMenu
+		display: flex
+		align-items: center
+
+	.burgerMenu:hover
+		opacity: 0.6
+
+	.photo_header
+		margin-left: 24px
+
+.active
+	height: 100%
+	color: rgba(0, 11, 38, 1)
+	font-weight: 500
+	@include mainNavLinkActive
+	border-bottom: 3px #07C88E solid

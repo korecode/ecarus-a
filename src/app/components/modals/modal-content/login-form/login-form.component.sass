@@ -1,0 +1,56 @@
+@import "src/app/styles/mixins.sass"
+@import "src/app/styles/varibles.sass"
+
+.form__input
+	display: flex
+	border: 1px solid rgba($label-color, 0.16)
+	margin-top: 24px
+	border-radius: 8px
+	padding: 20px 16px
+	width: 384px
+
+	@include _700
+		width: 100%
+
+@include _700
+	.form__input:first-child
+		margin-top: 48px
+
+.title
+	font-size: 28px
+.error_form_input
+	border: 2px solid red
+
+.modal
+	&__container
+		background: #FFFFFF
+		border-radius: 24px
+		max-width: 480px
+		padding: 48px
+	&__firstRow
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 48px
+	&__closeButton
+		width: 18px
+		height: 18px
+		background: navajowhite
+	&__underLinks
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin-top: 16px
+		& button
+			color: #07C88EFF
+			background: none
+			border: none
+			&:hover
+				cursor: pointer
+				color: #0f8d6a
+
+
+.login__btn
+	margin-top: 32px
+

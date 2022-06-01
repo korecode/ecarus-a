@@ -1,0 +1,65 @@
+@import "src/app/styles/mixins.sass"
+@import "src/app/styles/varibles.sass"
+
+.product_card
+	&__wrapper
+		max-width: 274px
+		min-height: 371px
+
+		@include _600
+			max-width: 343px
+
+	&__img_wrapper
+		position: relative
+		overflow: hidden
+		object-fit: cover
+		border-radius: 16px
+
+		& img
+			width: 274px
+
+			@include _600
+				width: 343px
+
+.product_card
+	&__brand
+		margin: 0
+		padding: 6px 10px
+
+		position: absolute
+		top: 24px
+		left: 24px
+
+		background: #FFFFFF
+
+		box-shadow: 0px 4px 24px rgba(51, 51, 51, 0.12)
+		border-radius: 10px
+
+	&__name
+		margin-top: 16px
+		margin-bottom: 0
+
+	&__type
+		margin-top: 5px
+		font-weight: 500
+		color: rgba($label-color, 0.56)
+
+	&__cost
+		display: flex
+		align-items: center
+
+		margin-top: 16px
+		font-weight: 600
+		color: black
+		font-size: 14px
+
+		&__icon
+			width: 24px
+			height: 24px
+			margin-right: 8px
+
+@media screen and (max-width: 500px)
+	.product_card__img_wrapper
+		img
+			max-width: 343px
+			width: 100%

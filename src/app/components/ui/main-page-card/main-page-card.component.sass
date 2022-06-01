@@ -1,0 +1,101 @@
+@import "src/app/styles/mixins.sass"
+@import "src/app/styles/varibles.sass"
+
+.nav_card
+	min-height: 300px
+	height: 100%
+	box-sizing: content-box
+
+	overflow: hidden
+
+	display: flex
+	justify-content: space-between
+
+	text-align: left
+
+	border: 1px solid rgba(18, 34, 88, 0.12)
+	border-radius: 16px
+
+	&__wrapper
+		width: 100%
+		max-width: 588px
+
+		&:not(:last-child)
+			margin-right: 24px
+
+		@include _700
+			margin-top: 16px
+
+	&__title
+		margin-top: 0
+		margin-bottom: 14px
+		line-height: inherit
+
+		@include _795
+			font-size: 24px
+			line-height: inherit
+
+	&__text
+		margin-bottom: 46px
+		color: rgba($label-color, 0.56)
+		line-height: 24px
+
+		@include _795
+			font-size: 16px
+
+	&__btn
+		display: flex
+		align-items: center
+		width: 48px
+
+		background: rgba($button-secondary-blue, 0.08)
+		border: 0
+		border-radius: 8px
+
+		padding: 12px
+
+		&:hover
+			cursor: pointer
+			background: rgba(20, 20, 24, 0.2)
+
+	&__content
+		padding: 40px 0 0 40px
+
+	&__img_wrapper
+		display: flex
+		align-items: flex-end
+		justify-content: end
+		padding-bottom: 6.5px
+		width: 100%
+
+		@include _795
+			position: absolute
+			width: 50%
+			padding: 0
+			right: 0
+
+			&:not(:last-child)
+				margin-bottom: 24px
+
+	&__img
+		height: auto
+		width: 100%
+		object-fit: cover
+
+		@include _795
+			max-height: 150px
+			width: auto
+
+	@include _795
+		margin-top: 0
+		position: relative
+		background: #FFFFFF
+
+
+@media screen and (min-width: 0px)
+	.nav_card__img_wrapper
+		bottom: -5px
+
+
+
+

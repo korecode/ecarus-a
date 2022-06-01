@@ -1,0 +1,68 @@
+<div class='market_wrapper'>
+	<div class='market__title'>
+		<h1>ЭкоМаркет</h1>
+		<div class='filter_chips_wrapper'>
+			<button class='filter_chips-active'>По популярности</button>
+			<button class='filter_chips'>По цене</button>
+			<button class='filter_chips'>По новизне</button>
+		</div>
+	</div>
+	<div class='main_content_wrapper'>
+		<div class='temp'>
+			<button class='remove_filters_btn'
+			        (click)='openFiltersDialog()'>
+				Фильтры
+			</button>
+			<div class='filters_wrapper'>
+				<app-filter></app-filter>
+			</div>
+			<button class='remove_filters_btn'>Сбросить фильтры</button>
+		</div>
+		<div class='products_table_wrapper'>
+			<div class='products_table'>
+				<div class='balance__card'>
+					<div class='balance__card__title'>
+						На вашем балансе
+						<img class='balance__logo'
+						     src='/assets/images/img.png' />
+						<div class='balance'>200</div>
+					</div>
+					Вы можете обменять их на скидку 200 руб
+					<button class='promo_code__btn'>Получить промокод</button>
+				</div>
+
+				<app-product-card
+					imgUrl='/assets/images/marketProductImage.png'
+					brand='Nike'
+					productName='Nike Air Max 2021'
+					productType='Мужская обувь'
+					cost='1000'></app-product-card>
+				<app-product-card
+					imgUrl='/assets/images/marketProductImage.png'
+					brand='Nike'
+					productName='Nike Air Max 2021'
+					productType='Мужская обувь'
+					cost='1000'></app-product-card>
+
+				<app-product-card
+					imgUrl='/assets/images/marketProductImage.png'
+					brand='Nike'
+					productName='Nike Air Max 2021'
+					productType='Мужская обувь'
+					cost='1000'></app-product-card>
+				<app-product-card
+					imgUrl='/assets/images/marketProductImage.png'
+					brand='Nike'
+					productName='Nike Air Max 2021'
+					productType='Мужская обувь'
+					cost='1000'></app-product-card>
+				<app-product-card
+					imgUrl='/assets/images/marketProductImage.png'
+					brand='Nike'
+					productName='Nike Air Max 2021'
+					productType='Мужская обувь'
+					cost='1000'></app-product-card>
+			</div>
+		</div>
+	</div>
+</div>

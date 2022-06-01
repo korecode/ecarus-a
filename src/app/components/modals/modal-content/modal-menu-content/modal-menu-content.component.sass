@@ -1,0 +1,52 @@
+@import "src/app/styles/varibles.sass"
+.ul_links
+	list-style-type: none
+	font-weight: 500
+	font-size: 18px
+	line-height: 24px
+	padding: 0
+
+	a
+		color: rgba($label-color, 0.88)
+
+	button
+
+		@extend .ul_links
+		color: rgba($label-color, 0.88)
+
+.link
+	display: flex
+	margin-top: 32px
+	border: none
+	background: none
+
+	&:hover
+		opacity: 0.7
+
+.modal
+	&__profile
+		&_row
+			display: flex
+			align-items: center
+
+		&_info
+			display: flex
+			flex-direction: column
+
+	&__balance
+		display: flex
+		align-items: center
+
+.profile__image
+	width: 64px
+	height: 64px
+	margin-right: 12px
+	border-radius: 50%
+
+.balance
+	margin-left: 8px
+	font-weight: 600
+
+.avatar
+	width: 24px
+	height: 24px

@@ -1,0 +1,60 @@
+@import "src/app/styles/mixins.sass"
+@import "src/app/styles/varibles.sass"
+
+.history_card
+	max-width: 768px
+	width: 100%
+
+	padding: 32px
+
+	border: 1px solid rgba($button-secondary-blue, 0.16)
+	box-sizing: border-box
+	border-radius: 20px
+
+	&__info
+		line-height: 20px
+		margin-top: 2px
+
+		@include _700
+			margin: 0 auto
+			margin-bottom: 40px
+			max-width: 343px
+
+.info_list
+	list-style: none
+	padding-left: 0
+	margin-top: 0
+
+	.info_list__item
+		margin-top: 16px
+
+
+
+label
+	font-size: 14px
+	line-height: 18px
+	color: rgba($label-color, 0.4)
+
+.materials_list
+
+	list-style-type: disc
+	display: flex
+	padding: 0
+	@include _700
+		flex-wrap: wrap
+
+	&__element
+		margin-right: 30px
+
+		&::marker
+			color: rgba($button-secondary-blue, 0.24)
+
+		&:first-child
+			list-style: none
+
+
+
+
+
+
+
